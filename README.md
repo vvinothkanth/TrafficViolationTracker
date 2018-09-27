@@ -16,16 +16,16 @@ It is a tracking system for detecting traffic violations, It will be loaded a tr
     This class contains the infraction property and methods.
     GetTicketNumber(), GetPoliceId(), GetDate(), GetLocation(), GetInfractionType(), GetIntoCsvFormat()
     
-**Traffic Violation**
+**Traffic Violation Class :**
 
    This class contains the driver , vehicle and infraction objects, and object creation methods.
    
-**Pattern**
+**Patterns Clas :**
 
     It have some basic regular expression patterns and license category list.
     patterns are charecter, charecter with space, charecter with digit , charecter digit and space, driver license id, vehicle license id, date, vehicle category and driving license category.
 
-**Data Validataion**
+**Data Validataion Class :**
 
 ```
    It contains validation methods . 
