@@ -42,3 +42,8 @@ It have some basic regular expression patterns and license category list.pattern
     ..* GetUsingDriverWithParticularVehicle()  // Get driver infractions using   particular vehicle
     ..* GetUsingVehicleCategory()	             // Get traffic infractions by using vehicle category
     ..* GetUsingRegisteredByParticularPolice() // Get Traffic violations registered b particular police 
+    
+  **Traffic Violation Tracker Class :**
+  
+  It will be interact with user to perform all those tasks.
+  
