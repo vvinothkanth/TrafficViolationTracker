@@ -33,12 +33,11 @@ It have some basic regular expression patterns and license category list.pattern
 **Traffic Violation Detection Class**
 
     It is used to load an csv file and convert into list of traffic violation object, and also it have some query methods 
-    CreateTrafficViolation()
-    CreateTrafficViolationList()
-    LoadCsvFile(...)
-    WriteIntoCsvFile(...)
-    Split(...)
-    GetUsingDriver(...)
-    GetUsingDriverWithParticularVehicle(...)
-    GetUsingVehicleCategory(...)	
-    GetUsingRegisteredByParticularPolice(...)
+    CreateTrafficViolationList()     // Used to create traffic violation list
+    LoadCsvFile( )                   // To load CSV file
+    WriteIntoCsvFile()               // To write a new data into CSV file
+    Split( )                         // Split the data
+    GetUsingDriver()                 // Get driver infractions   
+    GetUsingDriverWithParticularVehicle()  // Get driver infractions using   particular vehicle
+    GetUsingVehicleCategory()	             // Get traffic infractions by using vehicle category
+    GetUsingRegisteredByParticularPolice() // Get Traffic violations registered b particular police 
