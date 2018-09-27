@@ -4,15 +4,25 @@
     This class contains the driver property and methods.
     *Methods*
     ```
- GetName()
- GetAddress()
- GetDateOfBirth()
- GetDateOfIssue()
- GetCategory()
- GetIntoCsvFormat()
- GetLicenseNumber()
+    GetName()
+    GetAddress()
+    GetDateOfBirth()
+    GetDateOfIssue()
+    GetCategory()
+    GetIntoCsvFormat()
+    GetLicenseNumber()
     ```
 **Vehicle Class :**
     This class contains the vehicle property and methods.
+    *Methods*
+    ```
+    GetLicenseNumber()
+    GetOwnerName()
+    GetAddress()
+    GetCategory()
+    GetModel()
+    GetExpiryDate()
+    GetIntoCsvFormat()
+    ```
 **Infraction Class :**
     This class contains the infraction property and methods.
