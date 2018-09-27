@@ -17,6 +17,7 @@ It is a tracking system for detecting traffic violations, It will be loaded a tr
     GetTicketNumber(), GetPoliceId(), GetDate(), GetLocation(), GetInfractionType(), GetIntoCsvFormat()
     
 **Traffic Violation**
+
    This class contains the driver , vehicle and infraction objects, and object creation methods.
    
 **Pattern**
@@ -27,7 +28,7 @@ It is a tracking system for detecting traffic violations, It will be loaded a tr
 **Data Validataion**
 
    It contains validation methods .
-   > IsValid( data, regularExpression) 
-   > IsContain( data, listOfData )
-   > IsValidAge(age)
-   > IsNotFutureDate(date)
+   > IsValid( data, regularExpression).
+   > IsContain( data, listOfData ).
+   > IsValidAge(age).
+   > IsNotFutureDate(date).
