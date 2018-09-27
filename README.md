@@ -22,8 +22,7 @@ It is a tracking system for detecting traffic violations, It will be loaded a tr
    
 **Patterns Clas :**
 
-    It have some basic regular expression patterns and license category list.
-    patterns are charecter, charecter with space, charecter with digit , charecter digit and space, driver license id, vehicle license id, date, vehicle category and driving license category.
+It have some basic regular expression patterns and license category list.patterns are charecter, charecter with space, charecter with digit , charecter digit and space, driver license id, vehicle license id, date, vehicle category and driving license category.
 
 **Data Validataion Class :**
 
@@ -31,4 +30,15 @@ It is a tracking system for detecting traffic violations, It will be loaded a tr
    It contains validation methods . 
    IsValid( data, regularExpression), IsContain( data, listOfData ), IsValidAge(age), IsNotFutureDate(date).
    ```
+**Traffic Violation Detection Class**
 
+    It is used to load an csv file and convert into list of traffic violation object, and also it have some query methods 
+    CreateTrafficViolation()
+    CreateTrafficViolationList()
+    LoadCsvFile(...)
+    WriteIntoCsvFile(...)
+    Split(...)
+    GetUsingDriver(...)
+    GetUsingDriverWithParticularVehicle(...)
+    GetUsingVehicleCategory(...)	
+    GetUsingRegisteredByParticularPolice(...)
