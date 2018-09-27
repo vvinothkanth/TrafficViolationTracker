@@ -26,3 +26,11 @@
     ```
 **Infraction Class :**
     This class contains the infraction property and methods.
+    ```
+    GetTicketNumber()
+    GetPoliceId()
+    GetDate()
+    GetLocation()
+    GetInfractionType()
+    GetIntoCsvFormat()
+    ```
