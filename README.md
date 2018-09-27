@@ -27,9 +27,8 @@ It is a tracking system for detecting traffic violations, It will be loaded a tr
 
 **Data Validataion**
 
-   It contains validation methods .
-   IsValid( data, regularExpression).
-   IsContain( data, listOfData ).
-   IsValidAge(age).
-   IsNotFutureDate(date).
+```
+   It contains validation methods . 
+   IsValid( data, regularExpression), IsContain( data, listOfData ), IsValidAge(age), IsNotFutureDate(date).
+   ```
 
