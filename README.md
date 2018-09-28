@@ -1,4 +1,5 @@
 # TrafficViolationTracker
+<<<<<<< HEAD
 It is a tracking system for detecting traffic violations, It will be loaded a traffic violation  CSV file and  converted the data into list of traffic violation objects.  So we can able to filter the data  like , traffic violations of  driver, driver with vehicle , vehicle category and police id.
  
 **Driver Class :**
@@ -47,3 +48,5 @@ It have some basic regular expression patterns and license category list.pattern
   
   It will be interact with user to perform all those tasks.
   
+=======
+>>>>>>> f89f27dc711ba1229e145d9e33f4233103f2c5ac
