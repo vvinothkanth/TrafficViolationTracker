@@ -2,11 +2,11 @@
 //  Problem Title : Trafic violence
 //  Author        : Vinoth Kanth V
 //  Date          : 19 / 9 / 2018
-//  
-//
-//
 //-----------------------------------------------
 
+/// <summary>
+///  The Traffic Violation Tracking System NameSpace
+/// </summary>
 namespace TrafficViolationTrackingSystem
 {
     using System;
@@ -39,9 +39,9 @@ namespace TrafficViolationTrackingSystem
         /// <param name="infraction"></param>
         public TrafficViolation(Driver driver, Vehicle vehicle, Infraction infraction)
         {
-            _driver = driver;
-            _vehicle = vehicle;
-            _infraction = infraction;
+            _driver = driver ?? throw new ArgumentNullException();
+            _vehicle = vehicle ?? throw new ArgumentNullException(); ;
+            _infraction = infraction ?? throw new ArgumentNullException(); 
         }
 
         /// <summary>

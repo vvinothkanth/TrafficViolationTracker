@@ -1,17 +1,22 @@
-﻿
+﻿//-----------------------------------------------
+//  Problem Title : Trafic violence
+//  Author        : Vinoth Kanth V
+//  Date          : 19 / 9 / 2018
+//-----------------------------------------------
 
+/// <summary>
+///  The Traffic Violation TestCase NameSpace
+/// </summary>
 namespace TrafficViolationTestCase
 {
     using System;
-    using System.Text;
     using System.Collections.Generic;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using TrafficViolationTrackingSystem;
     using System.IO;
 
-
     /// <summary>
-    /// 
+    /// The Traffic Violation Datection Tests
     /// </summary>
     [TestClass()]
     public class TrafficViolationDatectionTests
@@ -94,15 +99,14 @@ namespace TrafficViolationTestCase
                 {
                     new TrafficViolation(null, null, null)
                 };
+
+                // It will be throw an object instance null  exception
                 trafficViolationDetection.GetUsingDriver("TN56195145", list);
             }
             catch (Exception ex)
             {
                 Assert.AreEqual("Object reference not set to an instance of an object.", ex.Message.ToString());
             }
-
-
-
         }
 
         /// <summary>
@@ -136,6 +140,7 @@ namespace TrafficViolationTestCase
                     new TrafficViolation(null, null, null)
                 };
 
+                // It will be throw an object instance null  exception
                 trafficViolationDetection.GetUsingDriverWithParticularVehicle("TN56195145","" ,list);
             }
             catch (Exception ex)
@@ -175,6 +180,7 @@ namespace TrafficViolationTestCase
                     new TrafficViolation(null, null, null)
                 };
 
+                // It will be throw an object instance null  exception
                 trafficViolationDetection.GetUsingVehicleCategory("TN56195145", list);
             }
             catch (Exception ex)
@@ -212,6 +218,7 @@ namespace TrafficViolationTestCase
                     new TrafficViolation(null, null, null)
                 };
 
+                // It will be throw an object instance null  exception
                 trafficViolationDetection.GetUsingRegisteredByParticularPolice("PC101", list);
             }
             catch (Exception ex)
@@ -221,25 +228,24 @@ namespace TrafficViolationTestCase
         }
 
         /// <summary>
-        /// 
+        /// To Check CheckCreateTrafficViolationList() method
         /// </summary>
         [TestMethod]
         public void CheckCreateTrafficViolationList()
         {
             try
             {
-
                 TrafficViolationDetection trafficViolationDetection = new TrafficViolationDetection();
+                // duplicate records
                 string csvFilePath = @"\\tsclient\E\vinothkanth\Assesment\GovernmentOfIndia\TrafficViolence\dummyRecord.csv";
                 List<string> trafficViolationDatas = trafficViolationDetection.LoadCsvFile(csvFilePath);
                 List<string[]> listOfTrafficViolationData = trafficViolationDetection.Split(trafficViolationDatas, ',');
 
-                // it will be throw an 
+                // it will be throw an Index out of boundary exception
                 trafficViolationDetection.CreateTrafficViolationList(listOfTrafficViolationData);
             }
             catch (Exception ex)
             {
-
                 Assert.AreEqual("Array Index Out Of Bounce", ex.Message.ToString());
             }
         }

@@ -1,11 +1,12 @@
-﻿//-----------------------------------------------
-//  Problem Title : Trafic violence
+﻿//----------------------------------------------------
+//  Problem Title : Traffic Violation Tracking Syatem
 //  Author        : Vinoth Kanth V
 //  Date          : 19 / 9 / 2018
-//  
-//
-//
-//-----------------------------------------------
+//-----------------------------------------------------
+
+/// <summary>
+/// The Traffic Violation Tracking System Namespace
+/// </summary>
 namespace TrafficViolationTrackingSystem
 {
     using System;

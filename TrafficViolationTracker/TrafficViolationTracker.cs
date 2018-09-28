@@ -2,11 +2,11 @@
 //  Problem Title : Trafic violence
 //  Author        : Vinoth Kanth V
 //  Date          : 19 / 9 / 2018
-//  
-//
-//
 //-----------------------------------------------
 
+/// <summary>
+///  The Traffic Violation Tracking System NameSpace
+/// </summary>
 namespace TrafficViolationTrackingSystem
 {
     using System;
@@ -114,6 +114,7 @@ namespace TrafficViolationTrackingSystem
                             Vehicle vehicle = TrafficViolation.CreateVehicle(vehicleDatas);
                             Infraction infraction = TrafficViolation.CreateInfraction(infractionDatas);
                             TrafficViolation trafficViolation = new TrafficViolation(driver, vehicle, infraction);
+
                             trafficViolationDetection.WriteIntoCsvFile(trafficViolation, csvFilePath);
                             listOfTrafficViolation.Add(trafficViolation);
                             IsDataNotStored = false;

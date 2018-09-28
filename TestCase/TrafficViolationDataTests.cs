@@ -1,15 +1,20 @@
-﻿
+﻿//-----------------------------------------------
+//  Problem Title : Trafic violence
+//  Author        : Vinoth Kanth V
+//  Date          : 19 / 9 / 2018
+//-----------------------------------------------
 
+/// <summary>
+///  The Traffic Violation TestCase NameSpace
+/// </summary>
 namespace TrafficViolationTestCase
 {
     using System;
-    using System.Text;
-    using System.Collections.Generic;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using TrafficViolationTrackingSystem;
 
     /// <summary>
-    /// 
+    /// The Traffic Violation Data Tests Class
     /// </summary>
     [TestClass()]
     public class TrafficViolationDataTests
@@ -20,7 +25,7 @@ namespace TrafficViolationTestCase
         [TestMethod]
         public void CheckVehicleData()
         {
-            // To check currect data 
+            // To check valid data 
             Vehicle validVehicle = new Vehicle("TN31CT5052", "RAM", "GUINDY NH45 MAIN ROAD", "LMV", "BAJAJ R16", "02/07/2025");
             string actualValue = @"TN31CT5052,RAM,GUINDY NH45 MAIN ROAD,LMV,BAJAJ R16,02/07/2025";
             string expectedValue = validVehicle.GetIntoCsvFormat();
@@ -142,7 +147,7 @@ namespace TrafficViolationTestCase
         [TestMethod]
         public void CheckDriverData()
         {
-            //to check currect data
+            //to check valid data
             Driver validDriver = new Driver("TN5619951234567", "Ravanan", "Address 2nd street", "03/03/2000", "07/07/2018", "HMV");
             string actualValue = validDriver.GetIntoCsvFormat();
             string expectedValue = @"TN5619951234567,Ravanan,Address 2nd street,HMV,03/03/2000,07/07/2018";

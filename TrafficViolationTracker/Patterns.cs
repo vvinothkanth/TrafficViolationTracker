@@ -2,12 +2,11 @@
 //  Problem Title : Trafic violence
 //  Author        : Vinoth Kanth V
 //  Date          : 19 / 9 / 2018
-//  
-//
-//
 //-----------------------------------------------
 
-
+/// <summary>
+///  The Traffic Violation Tracking System NameSpace
+/// </summary>
 namespace TrafficViolationTrackingSystem
 {
     /// <summary>

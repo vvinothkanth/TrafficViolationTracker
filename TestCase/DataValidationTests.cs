@@ -1,21 +1,26 @@
-﻿
+﻿//-----------------------------------------------
+//  Problem Title : Trafic violence
+//  Author        : Vinoth Kanth V
+//  Date          : 19 / 9 / 2018
+//-----------------------------------------------
 
+/// <summary>
+///  The Traffic Violation TestCase NameSpace
+/// </summary>
 namespace TrafficViolationTestCase
 {
     using System;
-    using System.Text;
-    using System.Collections.Generic;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using TrafficViolationTrackingSystem;
 
     /// <summary>
-    /// Summary description for DataValidationTests
+    /// The Data Validation Tests Class
     /// </summary>
     [TestClass]
     public class DataValidationTests
     {
         /// <summary>
-        /// To test the valid test methods
+        /// To test the IsValidTest() method
         /// </summary>
         [TestMethod()]
         public void IsValidTest()
@@ -58,7 +63,7 @@ namespace TrafficViolationTestCase
         }
 
         /// <summary>
-        /// To test is contain methods
+        /// To test IsContainTest() method
         /// </summary>
         [TestMethod()]
         public void IsContainTest()
@@ -75,7 +80,7 @@ namespace TrafficViolationTestCase
         }
 
         /// <summary>
-        /// To test valid age method
+        /// To test IsValidAgeTest() method
         /// </summary>
         [TestMethod]
         public void IsValidAgeTest()
@@ -98,7 +103,7 @@ namespace TrafficViolationTestCase
         }
 
         /// <summary>
-        /// To test is not future date method
+        /// To test IsNotFutureDateTest() method
         /// </summary>
         [TestMethod]
         public void IsNotFutureDateTest()

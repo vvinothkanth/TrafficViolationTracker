@@ -2,11 +2,11 @@
 //  Problem Title : Trafic violence
 //  Author        : Vinoth Kanth V
 //  Date          : 19 / 9 / 2018
-//  
-//
-//
 //-----------------------------------------------
 
+/// <summary>
+///  The Traffic Violation Tracking System NameSpace
+/// </summary>
 namespace TrafficViolationTrackingSystem
 {
     using System;
@@ -65,13 +65,13 @@ namespace TrafficViolationTrackingSystem
             bool isValidAge = false;
             try
             {
-                DateTime ageFormat = DateTime.Parse(dateOfBirth);
-                DateTime validUpTo = DateTime.Now.AddYears(-18);
-                isValidAge = (ageFormat <= validUpTo) ? true : false;
+                DateTime birthDate = DateTime.Parse(dateOfBirth);
+                DateTime validBirthDate = DateTime.Now.AddYears(-18);
+                isValidAge = (birthDate <= validBirthDate) ? true : false;
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                throw new Exception(ex.Message.ToString());
+                throw new Exception(exception.Message.ToString());
             }
 
             return isValidAge;
@@ -92,9 +92,9 @@ namespace TrafficViolationTrackingSystem
                 DateTime nowDate = DateTime.Now;
                 isNotFutureDate = (enteredDate <= nowDate ? true : false);
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                throw new Exception(ex.Message.ToString());
+                throw new Exception(exception.Message.ToString());
             }
 
             return isNotFutureDate;
