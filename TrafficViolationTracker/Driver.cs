@@ -6,8 +6,7 @@
 //
 //
 //-----------------------------------------------
-
-namespace TrafficViolence
+namespace TrafficViolationTrackingSystem
 {
     using System;
 
@@ -57,19 +56,19 @@ namespace TrafficViolence
         /// <param name="category">The License Category</param>
         public Driver(string licenseNumber, string name, string address, string dateOfBirth, string dateOfIssue, string category)
         {
-            if(!DataValidation.IsValid(licenseNumber, Patterns.DrivingLicenseNumber))
+            if (!DataValidation.IsValid(licenseNumber, Patterns.DrivingLicenseNumber))
             {
                 throw new ArgumentException("Invalid Driver License Id");
             }
-            if(!DataValidation.IsValid(name, Patterns.CharecterWithSpace))
+            if (!DataValidation.IsValid(name, Patterns.CharecterWithSpace))
             {
                 throw new ArgumentException("Invalid Name");
             }
-            if(!DataValidation.IsValid(address, Patterns.CharecterDigitAndSpace))
+            if (!DataValidation.IsValid(address, Patterns.CharecterDigitAndSpace))
             {
                 throw new ArgumentException("Invalid Address");
             }
-            if(!DataValidation.IsValid(dateOfBirth, Patterns.Date))
+            if (!DataValidation.IsValid(dateOfBirth, Patterns.Date))
             {
                 throw new ArgumentException("Invalid DOB Formate");
             }
@@ -77,15 +76,15 @@ namespace TrafficViolence
             {
                 throw new ArgumentException("Invalid DOB Formate");
             }
-            if(!DataValidation.IsValid(dateOfIssue, Patterns.Date))
+            if (!DataValidation.IsValid(dateOfIssue, Patterns.Date))
             {
                 throw new ArgumentException("Invalid DOI Formate");
             }
             if (!DataValidation.IsNotFutureDate(dateOfIssue))
             {
-                throw new ArgumentException("Invalid DOI Formate");
+                throw new ArgumentException("Invalid DOI");
             }
-            if(!DataValidation.IsContain(category, Patterns.DrivingLicenseCategorys))
+            if (!DataValidation.IsContain(category, Patterns.DrivingLicenseCategorys))
             {
                 throw new ArgumentException("License Category Is Not Found");
             }

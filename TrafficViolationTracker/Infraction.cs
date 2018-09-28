@@ -7,7 +7,7 @@
 //
 //-----------------------------------------------
 
-namespace TrafficViolence
+namespace TrafficViolationTrackingSystem
 {
     using System;
 
@@ -51,7 +51,7 @@ namespace TrafficViolence
         /// <param name="infractionType">The infraction type</param>
         public Infraction(string ticketNumber, string policeId, string date, string location, string infractionType)
         {
-            if(!DataValidation.IsValid(ticketNumber, Patterns.InfractionTicketId))
+            if (!DataValidation.IsValid(ticketNumber, Patterns.InfractionTicketId))
             {
                 throw new ArgumentException("Invalid infraction ticket number");
             }
@@ -65,7 +65,7 @@ namespace TrafficViolence
             }
             if (!DataValidation.IsNotFutureDate(date))
             {
-                throw new ArgumentException("Invalid DOI Formate");
+                throw new ArgumentException("It is a future date");
             }
             if (!DataValidation.IsValid(location, Patterns.CharecterDigitAndSpace))
             {
@@ -134,7 +134,7 @@ namespace TrafficViolence
         /// <returns></returns>
         public virtual string GetIntoCsvFormat()
         {
-            return string.Format("{0},{1},{2},{3},{4}", GetTicketNumber(), GetPoliceId(), GetDate(), GetLocation(), GetInfractionType()) ;            
+            return string.Format("{0},{1},{2},{3},{4}", GetTicketNumber(), GetPoliceId(), GetDate(), GetLocation(), GetInfractionType());
         }
 
     }

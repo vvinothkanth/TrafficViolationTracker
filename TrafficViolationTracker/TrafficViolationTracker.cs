@@ -7,7 +7,7 @@
 //
 //-----------------------------------------------
 
-namespace TrafficViolence
+namespace TrafficViolationTrackingSystem
 {
     using System;
     using System.Collections.Generic;
@@ -88,7 +88,7 @@ namespace TrafficViolence
                 if (userChoice == (int)Option.EnterTrafficViolation)
                 {
                     bool IsDataNotStored = true;
-                    
+
 
                     while (IsDataNotStored)
                     {
@@ -170,9 +170,9 @@ namespace TrafficViolence
                                 Console.WriteLine("Infraction Id | Registered Police Id  | Date | Place | Infraction Type");
                                 foreach (var trafficViolation in infractionOfDriverWithVehicle)
                                 {
-                                    
+
                                     string infractionData = trafficViolation.GetInfraction().GetIntoCsvFormat();
-                                    Console.WriteLine(infractionData);                                    
+                                    Console.WriteLine(infractionData);
                                 }
                                 Console.WriteLine("-----------------------------------------------------------------");
                             }
@@ -191,7 +191,7 @@ namespace TrafficViolence
                                 Console.WriteLine("----------------------------------------------------------------");
                                 Console.WriteLine("Infraction Id | Registered Police Id  | Date | Place | Infraction Type");
                                 foreach (var trafficViolation in vehicleWiseInfraction)
-                                {                                    
+                                {
                                     string infractionData = trafficViolation.GetInfraction().GetIntoCsvFormat();
                                     Console.WriteLine(infractionData);
                                 }

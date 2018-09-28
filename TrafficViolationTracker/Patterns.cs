@@ -7,7 +7,8 @@
 //
 //-----------------------------------------------
 
-namespace TrafficViolence
+
+namespace TrafficViolationTrackingSystem
 {
     /// <summary>
     /// The Regular Expression class
@@ -22,37 +23,37 @@ namespace TrafficViolence
         /// <summary>
         /// Regular expression for to check charecter and digit
         /// </summary>
-        public static readonly string CharecterWithDigit = @"^[a-zA-Z0-9][a-zA-Z0-9\\s]+$"; 
+        public static readonly string CharecterWithDigit = @"^[a-zA-Z0-9][a-zA-Z0-9\\s]+$";
 
         /// <summary>
         /// Regular expression for to check driving license number
         /// </summary>
-        public static readonly string DrivingLicenseNumber = @"^(?<intro>[A-Z]{2})(?<numeric>\d{2})(?<year>\d{4})(?<tail>\d{7})$"; 
+        public static readonly string DrivingLicenseNumber = @"^(?<intro>[A-Z]{2})(?<numeric>\d{2})(?<year>\d{4})(?<tail>\d{7})$";
 
         /// <summary>
         /// Regular expression for to check vehicle license number
         /// </summary>
-        public static readonly string VehicleLicenseNumber = @"^(?<intro>[A-Z]{2})(?<numeric>\d{2})(?<year>[A-Z]{2})(?<tail>\d{4})$"; 
+        public static readonly string VehicleLicenseNumber = @"^(?<intro>[A-Z]{2})(?<numeric>\d{2})(?<year>[A-Z]{2})(?<tail>\d{4})$";
 
         /// <summary>
         /// Regular expression for to check date
         /// </summary>
-        public static readonly string Date = @"(((0[1-9]|1[0-2])\/(0|1)[0-9]|2[0-9]|3[0-1])\/((19|20)\d\d))$"; 
+        public static readonly string Date = @"(((0[1-9]|1[0-2])\/(0|1)[0-9]|2[0-9]|3[0-1])\/((19|20)\d\d))$";
 
         /// <summary>
         /// Regular ecpression for to check infraction ticket number
         /// </summary>
-        public static readonly string InfractionTicketId = @"^(?<intro>\d{3})([/])((19|20))(?<year>\d{2})$"; 
+        public static readonly string InfractionTicketId = @"^(?<intro>\d{3})([/])((19|20))(?<year>\d{2})$";
 
         /// <summary>
         /// Regular expression for to check police id
         /// </summary>
-        public static readonly string PoliceId = @"^(?<intro>[A-Za-z]{2,4})(?<rank>\d{3})$"; 
+        public static readonly string PoliceId = @"^(?<intro>[A-Za-z]{2,4})(?<rank>\d{3})$";
 
         /// <summary>
         /// Regular expression for to check charecter and space
         /// </summary>
-        public static readonly string CharecterWithSpace = @"^(?<intro>[A-Za-z ]*)$"; 
+        public static readonly string CharecterWithSpace = @"^(?<intro>[A-Za-z ]*)$";
 
         /// <summary>
         /// Regular expression for to check charecter , digit with space

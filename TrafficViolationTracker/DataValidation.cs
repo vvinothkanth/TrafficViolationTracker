@@ -7,7 +7,7 @@
 //
 //-----------------------------------------------
 
-namespace TrafficViolence
+namespace TrafficViolationTrackingSystem
 {
     using System;
     using System.Linq;
@@ -28,17 +28,10 @@ namespace TrafficViolence
         public static bool IsValid(string data, string regularExpression)
         {
             bool isValid = false;
-            try
+            Regex expression = new Regex(regularExpression);
+            if (expression.IsMatch(data))
             {
-                Regex expression = new Regex(regularExpression);
-                if (expression.IsMatch(data))
-                {
-                    isValid = true;
-                }
-            }
-            catch (ArgumentException ex)
-            {
-                throw new ArgumentException(ex.Message.ToString());
+                isValid = true;
             }
 
             return isValid;
@@ -65,14 +58,14 @@ namespace TrafficViolence
         /// <summary>
         /// To validate the age limit
         /// </summary>
-        /// <param name="age"></param>
+        /// <param name="dateOfBirth"></param>
         /// <returns></returns>
-        public static bool IsValidAge(string age)
+        public static bool IsValidAge(string dateOfBirth)
         {
             bool isValidAge = false;
             try
             {
-                DateTime ageFormat = DateTime.Parse(age);
+                DateTime ageFormat = DateTime.Parse(dateOfBirth);
                 DateTime validUpTo = DateTime.Now.AddYears(-18);
                 isValidAge = (ageFormat <= validUpTo) ? true : false;
             }
@@ -80,7 +73,7 @@ namespace TrafficViolence
             {
                 throw new Exception(ex.Message.ToString());
             }
-            
+
             return isValidAge;
         }
 
@@ -90,7 +83,7 @@ namespace TrafficViolence
         /// </summary>
         /// <param name="date"></param>
         /// <returns></returns>
-        public static  bool IsNotFutureDate(string date)
+        public static bool IsNotFutureDate(string date)
         {
             bool isNotFutureDate = true;
             try

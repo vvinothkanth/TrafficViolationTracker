@@ -7,7 +7,7 @@
 //
 //-----------------------------------------------
 
-namespace TrafficViolence
+namespace TrafficViolationTrackingSystem
 {
     using System;
 
@@ -39,9 +39,9 @@ namespace TrafficViolence
         /// <param name="infraction"></param>
         public TrafficViolation(Driver driver, Vehicle vehicle, Infraction infraction)
         {
-            _driver = driver ?? throw new ArgumentNullException();
-            _vehicle = vehicle ?? throw new ArgumentNullException();
-            _infraction = infraction ?? throw new ArgumentNullException(); 
+            _driver = driver;
+            _vehicle = vehicle;
+            _infraction = infraction;
         }
 
         /// <summary>
@@ -104,7 +104,7 @@ namespace TrafficViolence
         /// <returns>The driver license object</returns>
         public static Driver CreateDriver(string[] driverDatas)
         {
-            Driver  driver = null;
+            Driver driver = null;
             try
             {
                 driver = new Driver(driverDatas[1].Trim(), driverDatas[2].Trim(), driverDatas[3].Trim(), driverDatas[5].Trim(), driverDatas[6].Trim(), driverDatas[4].Trim());
@@ -114,10 +114,10 @@ namespace TrafficViolence
                 Logger.WriteLine(exception.Message.ToString());
                 throw new IndexOutOfRangeException("Array Index Out Of Bounce");
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 Logger.WriteLine(exception.Message.ToString());
-                throw new Exception(exception.Message);
+                throw new Exception(exception.Message.ToString());
             }
 
             return driver;
@@ -143,10 +143,10 @@ namespace TrafficViolence
             catch (Exception exception)
             {
                 Logger.WriteLine(exception.Message.ToString());
-                throw new Exception(exception.Message);
+                throw new Exception(exception.Message.ToString());
             }
 
             return vehicle;
         }
     }
-}
+}   

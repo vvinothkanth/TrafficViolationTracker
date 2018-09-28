@@ -1,6 +1,5 @@
 ﻿
-
-namespace TrafficViolence
+namespace TrafficViolationTrackingSystem
 {
     using System;
     using System.IO;
@@ -22,6 +21,7 @@ namespace TrafficViolence
             }
             catch (Exception ex)
             {
+                throw new Exception(ex.Message);
             }
         }
 
@@ -38,6 +38,7 @@ namespace TrafficViolence
             }
             catch (Exception ex)
             {
+                throw new Exception(ex.Message);
             }
         }
     }

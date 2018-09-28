@@ -7,7 +7,7 @@
 //
 //-----------------------------------------------
 
-namespace TrafficViolence
+namespace TrafficViolationTrackingSystem
 {
     using System;
     using System.Collections.Generic;
@@ -40,10 +40,10 @@ namespace TrafficViolence
                     listOfTrafficViolationObject.Add(trafficViolationObject);
                 }
             }
-            catch (IndexOutOfRangeException exception)
+            catch (Exception exception)
             {
                 Logger.WriteLine(exception.Message.ToString());
-                throw new IndexOutOfRangeException(exception.Message.ToString());
+                throw new Exception(exception.Message.ToString());
             }
 
             return listOfTrafficViolationObject;
@@ -66,7 +66,7 @@ namespace TrafficViolence
                     listOfFileData.Add(line.ToUpper());
                 }
 
-                Logger.WriteLine(string.Format("File has been loaded from => {0}", filePath) );
+                Logger.WriteLine(string.Format("File has been loaded from => {0}", filePath));
             }
             catch (FileNotFoundException exception)
             {
@@ -99,6 +99,7 @@ namespace TrafficViolence
             }
             catch (Exception exception)
             {
+                Logger.WriteLine(exception.Message.ToString());
                 throw new Exception(exception.Message.ToString());
             }
         }
@@ -124,17 +125,9 @@ namespace TrafficViolence
         public List<string[]> Split(List<string> listOfRawData, char separator)
         {
             List<string[]> listOfData = new List<string[]>();
-            try
+            foreach (var data in listOfRawData)
             {
-                foreach (var data in listOfRawData)
-                {
-                    listOfData.Add(Split(data, separator));
-                }
-            }
-            catch (FileNotFoundException exception)
-            {
-                Logger.WriteLine(exception.Message.ToString());
-                throw new FileNotFoundException(exception.Message.ToString());
+                listOfData.Add(Split(data, separator));
             }
 
             return listOfData;
@@ -146,7 +139,7 @@ namespace TrafficViolence
         /// <param name="driverLicenseNumber">Driver license number</param>
         /// <param name="trafficViolations">List of traffic violation</param>
         /// <returns>List of traffic violation</returns>
-        public List<TrafficViolation> GetUsingDriver(string driverLicenseNumber , List<TrafficViolation> trafficViolations)
+        public List<TrafficViolation> GetUsingDriver(string driverLicenseNumber, List<TrafficViolation> trafficViolations)
         {
             List<TrafficViolation> listOfTrafficViolation = new List<TrafficViolation>();
             try
@@ -169,7 +162,7 @@ namespace TrafficViolence
         /// <param name="vehicleLicenseNumber"> vehicle license number</param>
         /// <param name="trafficViolations">List of traffic violation</param>
         /// <returns>List of traffic violation</returns>
-        public List<TrafficViolation> GetUsingDriverWithParticularVehicle(string driverLicenseNumber, string vehicleLicenseNumber,List<TrafficViolation> trafficViolations)
+        public List<TrafficViolation> GetUsingDriverWithParticularVehicle(string driverLicenseNumber, string vehicleLicenseNumber, List<TrafficViolation> trafficViolations)
         {
             List<TrafficViolation> listOfTrafficViolation = new List<TrafficViolation>();
             try
@@ -218,7 +211,7 @@ namespace TrafficViolence
             List<TrafficViolation> listOfTrafficViolation = new List<TrafficViolation>();
             try
             {
-                listOfTrafficViolation = (from trafficViolation in trafficViolations where trafficViolation.GetInfraction().GetPoliceId().Trim() == policeId.ToUpper() select trafficViolation).ToList();                
+                listOfTrafficViolation = (from trafficViolation in trafficViolations where trafficViolation.GetInfraction().GetPoliceId().Trim() == policeId.ToUpper() select trafficViolation).ToList();
             }
             catch (Exception exception)
             {
@@ -229,5 +222,4 @@ namespace TrafficViolence
             return listOfTrafficViolation;
         }
     }
-
 }

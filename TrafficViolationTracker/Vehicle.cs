@@ -7,7 +7,7 @@
 //
 //-----------------------------------------------
 
-namespace TrafficViolence
+namespace TrafficViolationTrackingSystem
 {
     using System;
 
@@ -57,7 +57,7 @@ namespace TrafficViolence
         /// <param name="expiryDate">The expiry date</param>
         public Vehicle(string licenseNumber, string ownerName, string address, string category, string model, string expiryDate)
         {
-            if(!DataValidation.IsValid(licenseNumber, Patterns.VehicleLicenseNumber))
+            if (!DataValidation.IsValid(licenseNumber, Patterns.VehicleLicenseNumber))
             {
                 throw new ArgumentException("Invalid Vehicle License Number");
             }
@@ -103,7 +103,7 @@ namespace TrafficViolence
         /// The owner name
         /// </summary>
         /// <returns></returns>
-        public string GetOwnerName( )
+        public string GetOwnerName()
         {
             return _ownerName;
         }
